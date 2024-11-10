@@ -98,6 +98,22 @@ public class AddPrint_linkedList {
          return val;
     }
 
+    public int iterativeSearch(int key) {
+        Node temp = head;
+        int i = 0;
+
+        while (temp != null){
+            if(temp.data == key) {
+                //key found
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        //key not found
+        return -1;
+    }
+
     public void print() {
         if (head == null) {
             System.out.println("LL is empty.");
@@ -140,6 +156,9 @@ public class AddPrint_linkedList {
         ll.removeLast();
         ll.print();
         System.out.println("Total size is :"+ll.size);
+
+        System.out.println("Item is found at index:"+ll.iterativeSearch(5));
+        System.out.println("Item is found at index:"+ll.iterativeSearch(30));
 
     }
 }
