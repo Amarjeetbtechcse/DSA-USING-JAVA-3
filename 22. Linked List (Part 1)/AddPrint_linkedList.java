@@ -160,6 +160,5 @@ public class AddPrint_linkedList {
         
         System.out.println("Item is found at index:"+ll.iterativeSearch(5));
         System.out.println("Item is found at index:"+ll.iterativeSearch(30));
-
     }
 }
